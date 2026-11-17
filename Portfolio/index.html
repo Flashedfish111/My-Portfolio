@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giulio Guglielmo | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sfondo-luce"></div>
+
+  <nav>
+    <a href="#" class="logo">Giulio.dev</a>
+    <div class="nav-links">
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#progetti">Progetti</a>
+      <a href="#contatti" class="btn-nav">Contattami</a>
+    </div>
+  </nav>
+
+  <header>
+    <span class="badge-stato">● Disponibile per nuovi progetti</span>
+    <h1>Ciao, sono <span class="testo-gradiente">Giulio Guglielmo</span></h1>
+    <p>Sviluppatore Web & Creator. Realizzo siti moderni, web app e bot Discord su misura per automatizzare e migliorare le community.</p>
+    <div class="hero-bottoni">
+      <a href="#progetti" class="btn-primario">Esplora i lavori</a>
+      <a href="#contatti" class="btn-secondario">Scrivimi</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="chi-sono">
+      <h2>Chi sono</h2>
+      <div class="box-vetro">
+        <p>Scrivo codice per risolvere problemi reali e costruire esperienze digitali intuitive. Mi occupo sia di sviluppo web frontend che di automazione e creazione di bot per Discord.</p>
+        <div class="skills">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Node.js / Discord.js</span>
+          <span>Bot Automation</span>
+          <span>Git</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="progetti">
+      <h2>Progetti selezionati</h2>
+      <div class="griglia-progetti">
+        
+        <!-- Progetto Bot 1 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="tag-progetto tag-discord">Discord Bot</span>
+          </div>
+          <h3>Bot Ticket & Supporto</h3>
+          <p>Sistema automatizzato per la gestione dei ticket di assistenza nei server Discord con canali privati e trascrizioni.</p>
+          <button class="link-progetto btn-apri-modale" 
+                  data-titolo="Bot Ticket & Supporto" 
+                  data-categoria="Discord Bot • Automazione Server"
+                  data-descrizione="Bot progettato per semplificare il supporto agli utenti su Discord. Crea canali privati su richiesta tramite pulsanti interattivi, gestisce i permessi dello staff e salva i log delle conversazioni."
+                  data-link="https://github.com">
+            Vedi dettagli →
+          </button>
+        </article>
+
+        <!-- Progetto Bot 2 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="tag-progetto tag-discord">Discord Bot</span>
+          </div>
+          <h3>Bot2010 Multiuso</h3>
+          <p>Bot personalizzato con comandi slash per la moderazione, benvenuto utenti e funzioni interattive per la community.</p>
+          <button class="link-progetto btn-apri-modale" 
+                  data-titolo="Bot2010 Multiuso" 
+                  data-categoria="Discord Bot • Comandi Slash"
+                  data-descrizione="Un bot versatile pensato per animare e proteggere i server Discord. Include messaggi di benvenuto personalizzati, comandi di moderazione rapida e strumenti utili per gli amministratori."
+                  data-link="https://github.com">
+            Vedi dettagli →
+          </button>
+        </article>
+
+        <!-- Progetto Web 1 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="tag-progetto">Web App</span>
+          </div>
+          <h3>Calcolatore Finanziario</h3>
+          <p>Un'applicazione web interattiva per gestire budget mensili e risparmi con calcolo automatico.</p>
+          <button class="link-progetto btn-apri-modale" 
+                  data-titolo="Calcolatore Finanziario" 
+                  data-categoria="Web App • HTML, CSS, JS"
+                  data-descrizione="Questo progetto permette di inserire entrate e uscite giornaliere, calcolando automaticamente la percentuale di risparmio e salvando i dati direttamente nel browser."
+                  data-link="https://github.com">
+            Vedi dettagli →
+          </button>
+        </article>
+
+        <!-- Progetto Web 2 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="tag-progetto">Sito Web</span>
+          </div>
+          <h3>Landing Page Ristorante</h3>
+          <p>Sito vetrina moderno e veloce con menù digitale filtrabile e prenotazione tavoli.</p>
+          <button class="link-progetto btn-apri-modale" 
+                  data-titolo="Landing Page Ristorante" 
+                  data-categoria="Sito Web • Design Responsive"
+                  data-descrizione="Realizzato da zero concentrandosi sulle prestazioni su smartphone. Include filtri per allergeni nel menù e integrazione diretta con le mappe."
+                  data-link="https://github.com/Flashedfish111/bot10.git">
+            Vedi dettagli →
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contatti">
+      <div class="box-contatti">
+        <h2>Lavoriamo insieme</h2>
+        <p>Hai bisogno di un sito web o di un bot Discord personalizzato per il tuo server? Copiami l'email o scrivimi subito.</p>
+        <div class="hero-bottoni">
+          <button id="btn-copia-email" class="btn-primario" data-email="guglielmog25@itisvinci.com">Copia Email</button>
+          <a href="guglielmog25@itisvinci.com" class="btn-secondario">Apri App Mail</a>
+        </div>
+        <span id="messaggio-copia" class="avviso-copia">✓ Indirizzo email copiato negli appunti!</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Finestra Modale per i Progetti -->
+  <div id="modale-progetto" class="modale-sfondo">
+    <div class="modale-box">
+      <button id="btn-chiudi-modale" class="modale-chiudi">✕</button>
+      <span id="modale-categoria" class="tag-progetto">Categoria</span>
+      <h3 id="modale-titolo">Titolo Progetto</h3>
+      <p id="modale-descrizione">Descrizione completa del progetto.</p>
+      <div class="modale-azioni">
+        <a id="modale-link" href="#" target="_blank" class="btn-primario">Apri su GitHub</a>
+        <button id="btn-chiudi-secondario" class="btn-secondario">Chiudi</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Giulio Guglielmo • Progettato e sviluppato da zero • Tutti i diritti riservati</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+  <!-- Barra di avanzamento scorrimento -->
+  <div id="barra-scorrimento"></div>
+
+  <div class="sfondo-luce"></div>
+
+</html>
